@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poppins:wght@200;400&family=Raleway:wght@300&family=Shadows+Into+Light&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #fff;
+    overflow-x: hidden;
+    
+    min-height: 100vh;
+    .header{
+        width: 100vw;
+        padding: 5px;
+        position: fixed;
+        top: 0;
+        left: 0;
+       z-index: 60;
+       height: 62.5px;
+       
+       
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .img{
+            height: 100%;
+            
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            
+            img{
+               
+                height: 50px;
+                object-fit: cover;
+            }
+        }
+        .cont{
+            width: 45%;
+            display: none;
+        }
+        .container{
+            width: 55%;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+           
+           ;
+        z-index: 50;;
+    
+
+            a{
+                text-align: center;
+                width: 110px;
+                border-radius: 18px;
+                padding: 5px 10px;
+                text-decoration: none;
+                position: relative;
+                color: #fff;
+                background-color: transparent;
+                z-index: 30;
+                transition: .4s;
+                font-family: "Poppins";
+                
+                &:hover::before{
+                    transform: scale(1);
+                }
+                &:hover{
+                    color: #000;
+                }
+                
+                
+               
+                &::before{
+                    transition: .4s;
+                    content: "";
+                    position: absolute;
+                    border-radius: 18px;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #fff;
+                    transform: scale(0);
+                    z-index: -5;
+                    
+                }
+            }
+        }
+    }
+}
+
+.bars-menu{
+    display: none;
+    width: 30px;
+    height: 30px;
+    margin-left: 18px;
+    
+    inset: 50%;
+    transform: scale(1.5);
+    cursor: pointer;
+    
+}
+
+.bars-menu span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin-top: 6px;
+    transform-origin: 0 100%;
+    transition: .4s;
+}
+
+.activeline1__bars-menu{
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.activeline2__bars-menu{
+   opacity: 0;
+   margin-left: -30px;
+}
+
+.activeline3__bars-menu{
+    transform: rotate(-45deg) translate(-4px,2px);
+}
+
+@media  screen and (max-width:1300px) {
+    .bars-menu{
+        display: block;
+    }
+    .container{
+        right: -100%;
+        transition: .4s;
+        top: 0;
+        position: fixed!important;
+        width: 45%!important;
+        margin-top: 62.5px;
+        flex-direction: column;
+        justify-content: space-around!important;
+        align-items: center;
+        height: calc(100vh - 62.5px);
+        background-color:rgba(0, 0, 0, 0.7);
+       
+    
+    }
+    .cont{
+        align-items: center;
+        display: flex!important;
+        justify-content: center;
+        
+    }
+   
+    
+}
+.rigth{
+    right: 0;
+    
+}
+
+.cuerpo{
+    position:relative;
+    background: url(https://cdn.pixabay.com/photo/2019/10/18/17/27/eye-4559763_1280.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    img{
+        
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+.about{
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    position: relative;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
